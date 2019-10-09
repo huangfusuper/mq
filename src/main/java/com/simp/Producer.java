@@ -22,20 +22,20 @@ public class Producer {
         /**
          *
          * 创建队列
-         * 消息队列名
-         * 是否队列持久化
-         * 是否为排他队列
-         * 是否队列自动删除
-         * 配置项
+         * 1.消息队列名
+         * 2.是否队列持久化
+         * 3.是否为排他队列
+         * 4.是否队列自动删除
+         * 5.配置项
          */
 
         channel.queueDeclare(QUEUE_NAME,false,false,false,null);
         /**
          * 发送消息
-         * 交换机名字
-         * 队列名字
-         * 配置
-         * 消息体
+         * 1.交换机名字
+         * 2.队列名字
+         * 3.配置
+         * 4.消息体
          */
         channel.basicPublish("",QUEUE_NAME,null,"醉卧沙场君莫笑".getBytes());
 

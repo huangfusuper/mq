@@ -24,7 +24,7 @@ public class RoutingSend {
         channel.exchangeDeclare(EXCHANGE_NAME,"direct");
 
         String msg = "醉卧沙场君莫笑";
-        String routingKey = "info";
+        String routingKey = "error";
         channel.basicPublish(EXCHANGE_NAME,routingKey,null,msg.getBytes());
         System.out.println("send:"+msg);
         channel.close();
